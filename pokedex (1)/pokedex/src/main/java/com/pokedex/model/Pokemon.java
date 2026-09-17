@@ -1,15 +1,21 @@
-package com.pokedex.model;
-
-import org.springframework.web.bind.annotation.GetMapping;
+package com.pokedex.pokedex.model;
 
 public class Pokemon {
 
     private String nome;
     private String tipo;
 
-    public Pokemon(String nome, String tipo){
+    public Pokemon(String nome, String tipo) {
         this.nome = nome;
         this.tipo = tipo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTipo() {
+        return tipo;
     }
 
     public void setNome(String nome) {
@@ -18,10 +24,5 @@ public class Pokemon {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
-    }
-    @GetMapping("/pokemon/pikachu")
-    public String Pokemon pegarPokemon(){
-        return pegarpokemon;
-
     }
 }
